@@ -33,7 +33,7 @@ posiadaj±cych tej funkcjonalno¶ci.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-        PREFIX=$RPM_BUILD_ROOT
+        PREFIX=$RPM_BUILD_ROOT%{_prefix}
 
 install -d $RPM_BUILD_ROOT%{_bindir}
 install -d $RPM_BUILD_ROOT%{_mandir}/man1
