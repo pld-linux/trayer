@@ -9,9 +9,8 @@ Group:		X11/Window Managers
 Source0:	http://fvwm-crystal.berlios.de/files/files/trayer/%{name}-%{version}.tar.gz
 # Source0-md5:	9acac948017bf1b5fc50bc1117c9b098
 URL:		http://fvwm-crystal.berlios.de/
-BuildRequires:	atk-devel
-BuildRequires:	freetype-devel
-BuildRequires:	pango-devel
+BuildRequires:	gtk+2-devel
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -47,6 +46,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGELOG COPYING CREDITS README
+%doc CHANGELOG COPYING CREDITS
 %attr(755,root,root) %{_bindir}/trayer
 %{_mandir}/man1/trayer.1*
