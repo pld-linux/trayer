@@ -1,6 +1,6 @@
 # TODO: optflags
 Summary:	A lightweight GTK2-based systray for UNIX desktop
-Summary(pl.UTF-8):   Lekki, bazujący na GTK2 dok systemowy (systray)
+Summary(pl.UTF-8):	Lekki, bazujący na GTK2 dok systemowy (systray)
 Name:		trayer
 Version:	1.0
 Release:	1
