@@ -1,6 +1,6 @@
 # TODO: optflags
 Summary:	A lightweight GTK2-based systray for UNIX desktop
-Summary(pl):	Lekki, bazuj±cy na GTK2 dok systemowy (systray)
+Summary(pl.UTF-8):   Lekki, bazujÄ…cy na GTK2 dok systemowy (systray)
 Name:		trayer
 Version:	1.0
 Release:	1
@@ -18,10 +18,10 @@ Trayer is small program designed to provide system tray similar to
 these in GNOME/KDE desktop environments for window managers which
 does not support that function.
 
-%description -l pl
-Trayer jest ma³ym programem zaprojektowanym by dostarczaæ funkcje
-doku systemowego znanego z GNOME/KDE dla ¶rodowisk okienkowych nie
-posiadaj±cych tej funkcjonalno¶ci.
+%description -l pl.UTF-8
+Trayer jest maÅ‚ym programem zaprojektowanym by dostarczaÄ‡ funkcje
+doku systemowego znanego z GNOME/KDE dla Å›rodowisk okienkowych nie
+posiadajÄ…cych tej funkcjonalnoÅ›ci.
 
 %prep
 %setup -q
