@@ -3,15 +3,18 @@ Summary:	A lightweight GTK2-based systray for UNIX desktop
 Summary(pl.UTF-8):	Lekki, bazujący na GTK2 dok systemowy (systray)
 Name:		trayer
 Version:	1.0
-Release:	1
+Release:	2
 License:	BSD
 Group:		X11/Window Managers
 Source0:	http://fvwm-crystal.berlios.de/files/files/trayer/%{name}-%{version}.tar.gz
 # Source0-md5:	9acac948017bf1b5fc50bc1117c9b098
+Patch0:		%{name}-makefile.patch
 URL:		http://fvwm-crystal.berlios.de/
 BuildRequires:	gtk+2-devel
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		__make	/usr/bin/make -j1
 
 %description
 Trayer is small program designed to provide system tray similar to
@@ -25,6 +28,8 @@ posiadających tej funkcjonalności.
 
 %prep
 %setup -q
+
+%patch0 -p1
 
 %build
 %{__make}
