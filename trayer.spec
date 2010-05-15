@@ -12,18 +12,17 @@ Patch0:		%{name}-makefile.patch
 URL:		http://fvwm-crystal.berlios.de/
 BuildRequires:	gtk+2-devel
 BuildRequires:	pkgconfig
+BuildRequires:	xorg-lib-libXmu-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		__make	/usr/bin/make -j1
 
 %description
 Trayer is small program designed to provide system tray similar to
-these in GNOME/KDE desktop environments for window managers which
-does not support that function.
+these in GNOME/KDE desktop environments for window managers which does
+not support that function.
 
 %description -l pl.UTF-8
-Trayer jest małym programem zaprojektowanym by dostarczać funkcje
-doku systemowego znanego z GNOME/KDE dla środowisk okienkowych nie
+Trayer jest małym programem zaprojektowanym by dostarczać funkcje doku
+systemowego znanego z GNOME/KDE dla środowisk okienkowych nie
 posiadających tej funkcjonalności.
 
 %prep
@@ -32,12 +31,12 @@ posiadających tej funkcjonalności.
 %patch0 -p1
 
 %build
-%{__make}
+%{__make} -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} -j1 install \
 	PREFIX=$RPM_BUILD_ROOT%{_prefix}
 
 install -d $RPM_BUILD_ROOT%{_bindir}
